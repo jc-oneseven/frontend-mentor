@@ -23,13 +23,7 @@
 
     <link rel="stylesheet" href="css/index.css" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-    </style>
+   
   </head>
   <body>
     <div class="app-calc">
@@ -41,23 +35,43 @@
             <div class="app-calc__theme-selection"> 
               <!-- Theme A - 01 -->
               <input type="radio" checked name="theme" id="theme-a">
-              <label for="theme-a"></label>
+              <label title="Choose Theme A" for="theme-a"></label>
               <!-- Theme B - 02 -->
               <input type="radio" name="theme" id="theme-b">
-              <label for="theme-b"></label>
+              <label title="Choose Theme B" for="theme-b"></label>
               <!-- Theme C - 03 -->
               <input type="radio" name="theme" id="theme-c">
-              <label for="theme-c"></label>
-              <!-- Theme D - 04 -->
-              <input type="radio" name="theme" id="theme-d">
-              <label for="theme-d"></label>
+              <label title="Choose Theme C" for="theme-c"></label>
             </div>
           </div>
         </header>
         <section class="app-calc__display">
-
+          <span class="app-calc__display-output">399,981 </span>
         </section>
-        <section class="app-calc__"></section> 
+        <section class="app-calc__btns">
+          <div class="app-calc__btns__regular">
+            <button class="app-calc__btn"> 7 </button>
+            <button class="app-calc__btn"> 8 </button>
+            <button class="app-calc__btn"> 9 </button>
+            <button class="app-calc__btn btn__del"> Del </button>
+            <button class="app-calc__btn"> 4 </button>
+            <button class="app-calc__btn"> 5 </button>
+            <button class="app-calc__btn"> 6 </button>
+            <button class="app-calc__btn"> + </button>
+            <button class="app-calc__btn"> 1 </button>
+            <button class="app-calc__btn"> 2 </button>
+            <button class="app-calc__btn"> 3 </button>
+            <button class="app-calc__btn"> - </button>
+            <button class="app-calc__btn"> . </button>
+            <button class="app-calc__btn"> 0 </button>
+            <button class="app-calc__btn"> / </button>
+            <button class="app-calc__btn"> x </button>
+          </div>
+          <div class="app-calc__btns__lg">
+            <button class="app-calc__btn btn__reset"> RESET </button>
+            <button class="app-calc__btn btn__equalTo"> = </button>
+          </div>
+        </section> 
       </main>
     </div>
     <div class="attribution">
