@@ -84,6 +84,36 @@ const [themeDark, themeLight, themeCustom] = document.getElementsByClassName(
 
 As you can see in the above HTML code snippet, I was trying to implement [BEM methodology](https://en.bem.info/methodology/) for CSS classes. And I wanted to continue work on BEM standards to deep dive into it.
 
+Also, I have used `prefers-color-scheme` to manage calc app theme based on the operating system theme. Implemented this feature by CSS variables and JS:
+
+```css
+:root {
+  /* Dark Theme */
+  --dark-body-bg: hsl(222, 26%, 31%);
+  --dark-body-color: #fff;
+  ...
+```
+to check user prefer theme:
+```js
+const userPrefersDark =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+const userPrefersLight =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: light)").matches;
+```
+
+to watch the change event, when user changes the theme of OS/Device:
+```js
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (event) => {
+    const newColorScheme = event.matches ? "dark" : "light";
+    changeTheme(newColorScheme);
+  });
+```
+
 ### Continued development
 
 The only pending task is to add more life to this calculator that, user can use this calc using keyboard only. I'll update this document once I am done with the pending task.

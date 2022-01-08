@@ -52,7 +52,6 @@ const calculation = () => {
       break;
     case "/":
       if (parseInt(valB) === 0) {
-        debugger;
         alert("Cannot divide by zero");
         return false;
       } else {
@@ -71,8 +70,6 @@ btnReset.addEventListener("click", () => {
 // Manage click of all the numbers on the calc
 for (btnNum of btnNumbs) {
   btnNum.addEventListener("click", (e) => {
-    // debugger;
-
     inputNumber = e.target.innerText;
 
     if (operator == null) {
@@ -201,8 +198,6 @@ if (userPrefersDark) {
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", (event) => {
-    debugger;
     const newColorScheme = event.matches ? "dark" : "light";
-    console.log(newColorScheme);
     changeTheme(newColorScheme);
   });
