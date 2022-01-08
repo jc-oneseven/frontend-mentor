@@ -1,6 +1,6 @@
 # Frontend Mentor - Calculator app solution
 
-This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building real projects. 
 
 ## Table of contents
 
@@ -25,7 +25,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 Users should be able to:
 
 - See the size of the elements adjust based on their device's screen size
-- Perform mathmatical operations like addition, subtraction, multiplication, and division
+- Perform mathematical operations like addition, subtraction, multiplication, and division
 - Adjust the color theme based on their preference
 - **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
@@ -54,9 +54,9 @@ Users should be able to:
 
 ### What I learned
 
-During planning and coding this challenge, I come to know a lot of basics of JavaScript concepts and coding practices. Also, I have used ES6 concepts to void loops and making it more effiecient.
+During planning and coding this challenge, I come to know a lot of the basics of JavaScript concepts and coding practices. Also, I have used ES6 concepts to void loops and make them more efficient.
 
-For example: I don't wanted to get reference of different radio buttons in 3 consts, so here what I have done using getting elements by class name:
+For example: I don't wanted to get references of different radio buttons in 3 consts, so here what I have done using getting elements by class name:
 
 ```html
 <div class="app-calc__theme-selection"> 
@@ -82,17 +82,17 @@ const [themeDark, themeLight, themeCustom] = document.getElementsByClassName(
 );
 ```
 
-As your can see in above HTML code snippet, I was trying to implement [BEM methodology](https://en.bem.info/methodology/) for CSS classes. And I wanted to continue work on BEM standards to deep div into it.
+As you can see in the above HTML code snippet, I was trying to implement [BEM methodology](https://en.bem.info/methodology/) for CSS classes. And I wanted to continue work on BEM standards to deep dive into it.
 
 ### Continued development
 
-The only pending task is to add more life in this calculator that, user can use this calc using keyboard only. I'll update this document once I am done with pending task.
+The only pending task is to add more life to this calculator that, user can use this calc using keyboard only. I'll update this document once I am done with the pending task.
 
 
 ### Useful resources
 
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) - This helped me for lay this calculator our quickly. I really liked this pattern and will use it going forward.
-- [BEM Methodology](https://en.bem.info/methodology/) - This is an amazing standards which helped me writting clear and managable CSS class name. I'd recommend it to anyone still learning this concept.
+- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) - This helped me to lay this calculator out quickly. I liked this pattern and will use it going forward.
+- [BEM Methodology](https://en.bem.info/methodology/) - This is an amazing standard that helped me write a clear and manageable CSS class name. I'd recommend it to anyone still learning this concept.
 
 
 ## Author
