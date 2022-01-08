@@ -31,20 +31,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./design/developed/dark.png)
+![](./design/developed/light.png)
+![](./design/developed/custom.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/jc-oneseven/frontend-mentor_calculator-app/tree/challenge/calc)
+- Live Site URL: [GitHub Page](https://jc-oneseven.github.io/frontend-mentor_calculator-app/)
 
 ## My process
 
@@ -52,23 +47,29 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- CSS Variables
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Pure JavaScript with ES6 concepts
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+During planning and coding this challenge, I come to know a lot of basics of JavaScript concepts and coding practices. Also, I have used ES6 concepts to void loops and making it more effiecient.
 
-To see how you can add code snippets, see below:
+For example: I don't wanted to get reference of different radio buttons in 3 consts, so here what I have done using getting elements by class name:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="app-calc__theme-selection"> 
+  <!-- Theme A - 01 -->
+  <input type="radio" checked name="theme" id="darkTheme" class="btn-theme-selections">
+  <label title="Choose Theme A" for="darkTheme"></label>
+  <!-- Theme B - 02 -->
+  <input type="radio"  name="theme" id="lightTheme" class="btn-theme-selections">
+  <label title="Choose Theme B" for="lightTheme"></label>
+  <!-- Theme C - 03 -->
+  <input type="radio" name="theme" id="customTheme" class="btn-theme-selections">
+  <label title="Choose Theme C" for="customTheme"></label>
+</div>
 ```
 ```css
 .proud-of-this-css {
@@ -76,38 +77,26 @@ To see how you can add code snippets, see below:
 }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+const [themeDark, themeLight, themeCustom] = document.getElementsByClassName(
+  "btn-theme-selections"
+);
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+As your can see in above HTML code snippet, I was trying to implement [BEM methodology](https://en.bem.info/methodology/) for CSS classes. And I wanted to continue work on BEM standards to deep div into it.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+The only pending task is to add more life in this calculator that, user can use this calc using keyboard only. I'll update this document once I am done with pending task.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) - This helped me for lay this calculator our quickly. I really liked this pattern and will use it going forward.
+- [BEM Methodology](https://en.bem.info/methodology/) - This is an amazing standards which helped me writting clear and managable CSS class name. I'd recommend it to anyone still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Jagdish Chaudhari](http://jagdishchaudhari.co.in/)
+- Frontend Mentor - [@jc-oneseven](hhttps://www.frontendmentor.io/profile/jc-oneseven)
+- YouTube - [Jagdish Chaudhari](https://www.youtube.com/channel/UCpNQJmysPr8aqR_OVK_xVQQ)
