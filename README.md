@@ -1,131 +1,106 @@
-# Frontend Mentor - Calculator app solution
+# Frontend Mentor - Interactive comments section
 
-This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building real projects. 
+![Design preview for the Interactive comments section coding challenge](./design/desktop-preview.jpg)
 
-## Table of contents
+## Welcome! 👋
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+Thanks for checking out this front-end coding challenge.
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-## Overview
+**To do this challenge, you need a strong understanding of HTML, CSS and JavaScript.**
 
-### The challenge
+## The challenge
 
-Users should be able to:
+Your challenge is to build out this interactive comments section and get it looking as close to the design as possible.
 
-- See the size of the elements adjust based on their device's screen size
-- Perform mathematical operations like addition, subtraction, multiplication, and division
-- Adjust the color theme based on their preference
-- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-### Screenshot
+We provide the data in a local `data.json` file, so use that to populate the content on the first load. If you want to take it up a notch, feel free to build this as a full-stack CRUD application!
 
-![](./design/developed/dark.png)
-![](./design/developed/light.png)
-![](./design/developed/custom.png)
+Your users should be able to:
 
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Create, Read, Update, and Delete comments and replies
+- Upvote and downvote comments
+- **Bonus**: If you're building a purely front-end project, use `localStorage` to save the current state in the browser that persists when the browser is refreshed.
+- **Bonus**: Instead of using the `createdAt` strings from the `data.json` file, try using timestamps and dynamically track the time since the comment or reply was posted.
 
-### Links
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-- Solution URL: [GitHub](https://github.com/jc-oneseven/frontend-mentor_calculator-app/tree/challenge/calc)
-- Live Site URL: [GitHub Page](https://jc-oneseven.github.io/frontend-mentor_calculator-app/)
+### Expected behaviour
 
-## My process
+- First-level comments should be ordered by their score, whereas nested replies are ordered by time added.
+- Replying to a comment adds the new reply to the bottom of the nested replies within that comment.
+- A confirmation modal should pop up before a comment or reply is deleted.
+- Adding a new comment or reply uses the `currentUser` object from within the `data.json` file.
+- You can only edit or delete your own comments and replies.
 
-### Built with
+## Where to find everything
 
-- Semantic HTML5 markup
-- CSS custom properties
-- CSS Variables
-- CSS Grid
-- Mobile-first workflow
-- Pure JavaScript with ES6 concepts
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
-### What I learned
+The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
 
-During planning and coding this challenge, I come to know a lot of the basics of JavaScript concepts and coding practices. Also, I have used ES6 concepts to void loops and make them more efficient.
+If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
 
-For example: I don't wanted to get references of different radio buttons in 3 consts, so here what I have done using getting elements by class name:
+You will find all the required assets in the `/images` folder. The assets are already optimized.
 
-```html
-<div class="app-calc__theme-selection"> 
-  <!-- Theme A - 01 -->
-  <input type="radio" checked name="theme" id="darkTheme" class="btn-theme-selections">
-  <label title="Choose Theme A" for="darkTheme"></label>
-  <!-- Theme B - 02 -->
-  <input type="radio"  name="theme" id="lightTheme" class="btn-theme-selections">
-  <label title="Choose Theme B" for="lightTheme"></label>
-  <!-- Theme C - 03 -->
-  <input type="radio" name="theme" id="customTheme" class="btn-theme-selections">
-  <label title="Choose Theme C" for="customTheme"></label>
-</div>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const [themeDark, themeLight, themeCustom] = document.getElementsByClassName(
-  "btn-theme-selections"
-);
-```
+There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-As you can see in the above HTML code snippet, I was trying to implement [BEM methodology](https://en.bem.info/methodology/) for CSS classes. And I wanted to continue work on BEM standards to deep dive into it.
+## Building your project
 
-Also, I have used `prefers-color-scheme` to manage calc app theme based on the operating system theme. Implemented this feature by CSS variables and JS:
+Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
 
-```css
-:root {
-  /* Dark Theme */
-  --dark-body-bg: hsl(222, 26%, 31%);
-  --dark-body-color: #fff;
-  ...
-```
-to check user prefer theme:
-```js
-const userPrefersDark =
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
+2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
+3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
+4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
+5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
+6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-const userPrefersLight =
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: light)").matches;
-```
+## Deploying your project
 
-to watch the change event, when user changes the theme of OS/Device:
-```js
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", (event) => {
-    const newColorScheme = event.matches ? "dark" : "light";
-    changeTheme(newColorScheme);
-  });
-```
+As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
 
-### Continued development
+- [GitHub Pages](https://pages.github.com/)
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
 
-The only pending task is to add more life to this calculator that, user can use this calc using keyboard only. I'll update this document once I am done with the pending task.
+You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
+## Create a custom `README.md`
 
-### Useful resources
+We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
 
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) - This helped me to lay this calculator out quickly. I liked this pattern and will use it going forward.
-- [BEM Methodology](https://en.bem.info/methodology/) - This is an amazing standard that helped me write a clear and manageable CSS class name. I'd recommend it to anyone still learning this concept.
+The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
 
+Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
-## Author
+## Submitting your solution
 
-- Website - [Jagdish Chaudhari](http://jagdishchaudhari.co.in/)
-- Frontend Mentor - [@jc-oneseven](hhttps://www.frontendmentor.io/profile/jc-oneseven)
-- YouTube - [Jagdish Chaudhari](https://www.youtube.com/channel/UCpNQJmysPr8aqR_OVK_xVQQ)
+Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+
+Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+
+## Sharing your solution
+
+There are multiple places you can share your solution:
+
+1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
+2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
+3. Share your solution on other social channels like LinkedIn.
+4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+
+We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+
+The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+
+## Got feedback for us?
+
+We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+
+This challenge is completely free. Please share it with anyone who will find it useful for practice.
+
+**Have fun building!** 🚀

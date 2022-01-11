@@ -1,85 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive comments section</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
 
-    <title>Frontend Mentor | Calculator app</title>
-
-    <link rel="stylesheet" href="css/index.css" />
-
-   
-  </head>
-  <body>
-    <div class="app-calc">
-      <main class="app-calc__container">
-        <header class="app-calc__header">
-          <h4>calc</h4>
-          <div class="app-calc__header-themes"> 
-            <span class="app-calc__header__label"> Theme </span> 
-            <div class="app-calc__theme-selection"> 
-              <!-- Theme A - 01 -->
-              <input type="radio" checked name="theme" id="darkTheme" class="btn-theme-selections">
-              <label title="Choose Theme A" for="darkTheme"></label>
-              <!-- Theme B - 02 -->
-              <input type="radio"  name="theme" id="lightTheme" class="btn-theme-selections">
-              <label title="Choose Theme B" for="lightTheme"></label>
-              <!-- Theme C - 03 -->
-              <input type="radio" name="theme" id="customTheme" class="btn-theme-selections">
-              <label title="Choose Theme C" for="customTheme"></label>
-            </div>
-          </div>
-        </header>
-        <div class="app-calc__display">
-          <span id="js-display" class="app-calc__display-output"> 399,900,00 </span>
-        </div>
-        <div class="app-calc__btns">
-          <div class="app-calc__btns__regular">
-            <button class="app-calc__btn js-btn-numbs"> 7 </button>
-            <button class="app-calc__btn js-btn-numbs"> 8 </button>
-            <button class="app-calc__btn js-btn-numbs"> 9 </button>
-            <button id="js-btn-del" class="app-calc__btn btn__del"> Del </button>
-            <button class="app-calc__btn js-btn-numbs"> 4 </button>
-            <button class="app-calc__btn js-btn-numbs"> 5 </button>
-            <button class="app-calc__btn js-btn-numbs"> 6 </button>
-            <button class="app-calc__btn js-btn-operator"> + </button>
-            <button class="app-calc__btn js-btn-numbs"> 1 </button>
-            <button class="app-calc__btn js-btn-numbs"> 2 </button>
-            <button class="app-calc__btn js-btn-numbs"> 3 </button>
-            <button class="app-calc__btn js-btn-operator"> - </button>
-            <button class="app-calc__btn js-btn-numbs"> . </button>
-            <button class="app-calc__btn js-btn-numbs"> 0 </button>
-            <button class="app-calc__btn js-btn-operator"> / </button>
-            <button class="app-calc__btn js-btn-operator"> x </button>
-          </div>
-          <div class="app-calc__btns__lg">
-            <button id="js-btn-reset" class="app-calc__btn btn__reset"> RESET </button>
-            <button id="js-btn-equalTo" class="app-calc__btn btn__equalTo"> = </button>
-          </div>
-        </div> 
-      </main>
-    </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io/profile/jc-oneseven" target="_blank"><strong> Frontend Mentor. </strong></a>
-      Coded by <a href="https://github.com/jc-oneseven/frontend-mentor_calculator-app/tree/challenge/calc" target="_blank"> <strong> Jagdish Chaudhari </strong></a>.
-    </div>
-
-    <script src="js/index.js"></script>
-  </body>
+  <!-- Pull dynamic content from the data.json file -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
 </html>
