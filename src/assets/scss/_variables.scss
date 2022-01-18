@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+// Variables
+
+// Colors
+$body-bg: #f5f6fa;
+$primary: #5457b6;
+$primary-light: #324152;
+$primary-very-light: #c3c4ef;
+$danger: #ed6468;
+$danger-light: #ffb8bb;
+$gray-light: #eaecf1;
+$gray-dark: #67727e;
+$white: #ffffff;
+$black: #3a4047;
+
+// Container
+$container-width: 750px;
+$container-padding: 1em;
+
+// Border Radius
+$border-radius: 4px;
+
+// Card
+$card-border-radius: $border-radius * 2;
+$card-shadow: 0 2px 16px 2px rgba($gray-light, 1);

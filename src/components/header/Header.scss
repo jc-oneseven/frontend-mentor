@@ -1,0 +1,20 @@
+@import "../../assets/scss/variables";
+.header {
+  background-color: $primary;
+  color: $white;
+
+  &__title {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba($white, 0.5);
+    a {
+      margin: 0 3px;
+      color: $white;
+    }
+  }
+}

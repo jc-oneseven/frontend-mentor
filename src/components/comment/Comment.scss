@@ -1,0 +1,102 @@
+@import "../../assets/scss/variables";
+
+.comment-box {
+  display: flex;
+  align-items: flex-start;
+  &__container {
+    flex-grow: 1;
+  }
+  &__header,
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  &__header {
+    .user-info {
+      margin-right: 1em;
+      &__dp {
+        width: 35px;
+        margin-right: 0.5em;
+        margin-bottom: 0;
+        img {
+          width: 100%;
+        }
+      }
+      &__name {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: $black;
+      }
+    }
+  }
+  &__time {
+    color: $gray-dark;
+  }
+
+  &__toolbar {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    .btn {
+      border: 0;
+      background-color: transparent;
+      font-family: inherit;
+      font-size: 1em;
+      font-weight: 500;
+      color: $primary;
+      display: flex;
+      align-items: center;
+      margin-left: 1em;
+      cursor: pointer;
+      &__delete {
+        color: $danger;
+      }
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__comment {
+    margin-top: 1em;
+    color: $gray-dark;
+    line-height: 1.3em;
+  }
+}
+
+.vote-control {
+  background-color: $body-bg;
+  padding: 12px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: $card-border-radius;
+  border: 1px solid lighten($gray-dark, 50);
+  margin-right: 1.5em;
+  &__btn {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  &__counts {
+    color: $primary;
+    font-weight: 500;
+    font-size: 0.9em;
+  }
+}
+
+// Comment Tree Structure
+.comment-replies {
+  position: relative;
+  padding-left: 6em;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 3em;
+    top: 0;
+    bottom: 0;
+    background-color: $gray-light;
+    width: 2px;
+  }
+}

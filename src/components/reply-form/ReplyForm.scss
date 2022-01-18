@@ -1,0 +1,31 @@
+@import "../../assets/scss/variables";
+.current-user {
+  &__dp {
+    width: 45px;
+    margin-bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+.reply-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  textarea {
+    flex-grow: 1;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 1em;
+    height: 70px;
+    border: 1px solid $gray-light;
+    border-radius: $border-radius * 2;
+    resize: none;
+    transition: box-shadow 0.2s;
+    &:focus {
+      outline: none;
+
+      box-shadow: 0 0 4px 1px $primary-light;
+    }
+  }
+}
