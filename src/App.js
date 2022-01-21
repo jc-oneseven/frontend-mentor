@@ -29,6 +29,14 @@ function App() {
     console.log(comment);
   };
 
+  const onNewReplyHandler = (newReplyOnComment) => {
+    const updateComments = comment.map((x) => {
+      debugger;
+      return newReplyOnComment.id === x.id ? newReplyOnComment : x;
+    });
+    setComment(updateComments);
+  };
+
   return (
     <div>
       <Header />
@@ -37,12 +45,22 @@ function App() {
           {comment.map((comment) => {
             return (
               <>
-                <Comment key={comment.id} comment={comment} />
+                <Comment
+                  currentUser={currentUser}
+                  onNewComment={onNewReplyHandler}
+                  key={comment.id}
+                  comment={comment}
+                />
                 {/* Check if replies available */}
                 {comment["replies"].length > 0 &&
                   comment["replies"].map((reply) => (
                     <div className="comment-replies">
-                      <Comment comment={reply} />
+                      <Comment
+                        currentUser={currentUser}
+                        onNewComment={onNewReplyHandler}
+                        key={comment.id}
+                        comment={reply}
+                      />
                     </div>
                   ))}
               </>

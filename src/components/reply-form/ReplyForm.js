@@ -26,7 +26,6 @@ const ReplyForm = (props) => {
       user: currentUser,
       replies: [],
     };
-
     props.onNewComment(commentData);
 
     setCommentContent("");
